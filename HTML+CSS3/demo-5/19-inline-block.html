@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>inline-block</title>
+  <style media="screen">
+    .floatbox {
+      border: 3px solid blue;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      /* float: left; */
+      display:inline-block;
+    }
+
+    .div1 {
+      border: 3px solid red;
+      /* clear: left; */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>float</h1>
+
+  <div class="floatbox">
+    box
+  </div>
+  <div class="floatbox">
+    box
+  </div>
+  <div class="floatbox">
+    box
+  </div>
+  <div class="floatbox">
+    box
+  </div>
+
+  <div class="floatbox">
+    box
+  </div>
+  <div class="div1">
+    div1 content
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+html {
+  font-family: 'Noto Serif', serif;
+  line-height: 1.5;
+  font-size: 15px
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+nav{
+  text-align: right;
+
+}
+
+.button-bar{
+  border: none;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 24px;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-bar:hover{
+  background-color: #ddd;
+}

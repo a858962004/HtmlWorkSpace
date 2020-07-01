@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>垂直居中对齐</title>
+  <style media="screen">
+    .center {
+      border: 3px solid red;
+      /* 1、padding */
+      /* padding: 100px 0; */
+      text-align: center;
+      /* 2、line-height */
+      /* line-height: 200px; */
+      height: 200px;
+      /* 3、position */
+      position:relative;
+    }
+
+    .center p {
+      /* text-align: center; */
+      /* line-height: 1;
+      display: inline-block; */
+      position:absolute;
+      margin:0;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>vertically aligh</h1>
+  <div class="center">
+    <p>度阿奴ode额内容，垂直居中</p>
+  </div>
+</body>
+
+</html>

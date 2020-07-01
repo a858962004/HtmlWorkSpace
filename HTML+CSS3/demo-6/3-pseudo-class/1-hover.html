@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>为类选择器 hover</title>
+  <style media="screen">
+    /* hover指当鼠标放在元素上的时候 */
+    div {
+      border: 1px solid black;
+    }
+
+    div p {
+      display: none;
+      background-color: red;
+      padding: 20px;
+    }
+
+    /* div:hover {
+      background-color: yellow;
+    } */
+
+    div:hover p {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+    鼠标放在我的上面
+    <p>hello,伪类选择器</p>
+  </div>
+</body>
+
+</html>

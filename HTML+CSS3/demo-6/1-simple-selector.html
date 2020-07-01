@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="
+" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>简单选择器</title>
+  <style media="screen">
+    p {
+      background-color: yellow;
+    }
+
+    /* class类选择器 */
+    .p1 {
+      background-color: green;
+    }
+
+    /* id选择器，id前加# */
+    #p2 {
+      background-color: lightblue;
+    }
+
+    /* 选择器优先级：id选择器>class选择器>元素选择器 */
+    #p1 {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="p1" class="p1">段落内容1</p>
+  <p id="p2">段落内容2</p>
+  <p>段落内容3</p>
+</body>
+
+</html>

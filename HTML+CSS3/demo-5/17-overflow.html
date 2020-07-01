@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>overflow</title>
+  <style media="screen">
+    .overflow {
+      border: 1px solid red;
+      background-color: #eee;
+      width: 200px;
+      height: 100px;
+      /* 默认溢出显示 */
+      /* overflow:visible; */
+      /* 隐藏溢出部分 */
+      /* overflow:hidden; */
+      /* 可以滚动 */
+      /* overflow:scroll; */
+      /* 根据内容自动设置滚动 */
+      /* overflow: auto; */
+
+      /* x轴隐藏滚动条，y轴设置滚动条 */
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    p {
+      background: lightblue;
+      width: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>overflow</h1>
+  <div class="overflow">
+    overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况
+    <p>overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况overflow是用来控制元素内容溢出情况</p>
+  </div>
+</body>
+
+</html>

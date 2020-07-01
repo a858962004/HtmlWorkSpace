@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>伪元素选择器</title>
+  <style media="screen">
+    /* selector::pseudo-element {
+      property:value;
+    } */
+
+    p::first-line {
+      color: red;
+    }
+
+    .p2::first-letter {
+      color: yellow;
+    }
+
+    span::after {
+      content: " new!";
+      color: red;
+    }
+
+    span::before {
+      content: " new!";
+      color: yellow;
+    }
+
+    p::selection {
+      background-color: green;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="p1">这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容</p>
+  <p class="p2">这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容这个里边是段落的内容</p>
+  <span>新闻的标题</span>
+</body>
+
+</html>

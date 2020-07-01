@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>animation 动画</title>
+  <style media="screen">
+    .animation {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /* animation:指定动画  两针之间间隔时间  延迟时间  动画效果  执行次数(infinite无限执行)  运行方向（reverse-从to到from，alternate-从from到to再从to到from）*/
+      animation: example 10s 1s ease-in-out infinite alternate;
+      -webkit-animation: example 10s 1s ease-in-out infinite alternate;
+      -moz-animation: example 10s 1s ease-in-out infinite alternate;
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+
+    @keyframes example {
+
+      /*from {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+
+      to {
+        background-color: blue;
+        left:80%;
+        top:0;
+      }*/
+      0% {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+
+      25% {
+        background-color: blue;
+        left: 80%;
+        top: 0;
+      }
+
+      50% {
+        background-color: blue;
+        left: 80%;
+        top: 300px;
+      }
+
+      75% {
+        background-color: blue;
+        left: 0;
+        top: 300px;
+      }
+
+      100% {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    @-webkit-keyframes example {
+
+      /*from {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+
+      to {
+        background-color: blue;
+        left:80%;
+        top:0;
+      }*/
+      0% {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+
+      25% {
+        background-color: blue;
+        left: 80%;
+        top: 0;
+      }
+
+      50% {
+        background-color: blue;
+        left: 80%;
+        top: 300px;
+      }
+
+      75% {
+        background-color: blue;
+        left: 0;
+        top: 300px;
+      }
+
+      100% {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    @-moz-keyframes example {
+
+      /*from {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+
+      to {
+        background-color: blue;
+        left:80%;
+        top:0;
+      }*/
+      0% {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+
+      25% {
+        background-color: blue;
+        left: 80%;
+        top: 0;
+      }
+
+      50% {
+        background-color: blue;
+        left: 80%;
+        top: 300px;
+      }
+
+      75% {
+        background-color: blue;
+        left: 0;
+        top: 300px;
+      }
+
+      100% {
+        background-color: green;
+        left: 0;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="animation">
+
+  </div>
+</body>
+
+</html>

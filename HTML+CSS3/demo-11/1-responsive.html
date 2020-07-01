@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <title>响应式布局</title>
+  <style media="screen">
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .row {
+      border: 3px solid red;
+    }
+
+    /* box设置了浮动效果，设置row的高度适配box，否则row的高度为0 */
+    .row::after,
+    .row::before {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .box {
+      width: 25%;
+      height: 200px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 200px;
+      float: left;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    @media only screen and (max-width:600px) {
+      .box {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width:601px) and (max-width:768px) {
+      .box {
+        width: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>响应式布局</h1>
+  <div class="row">
+    <div class="box orange">
+      1
+    </div>
+    <div class="box green">
+      2
+    </div>
+    <div class="box yellow">
+      3
+    </div>
+    <div class="box blue">
+      4
+    </div>
+</body>
+
+</html>

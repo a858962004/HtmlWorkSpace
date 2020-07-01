@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>属性选择器[attribute$="value"]</title>
+  <style media="screen">
+    p[title$="p"] {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>元素有attribute以value值结尾</h1>
+  <p title="top p">段落内容1</p>
+  <p title="top-p">段落内容1</p>
+  <p title="top-p2">段落内容2</p>
+  <p title="topp3">段落内容3</p>
+  <p>段落内容4</p>
+  <p class="my-test">段落内容5</p>
+  <p class="mytest">段落内容6</p>
+</body>
+
+</html>

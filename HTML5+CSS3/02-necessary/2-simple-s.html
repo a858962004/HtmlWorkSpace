@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS 组合选择器</title>
+  <style media="screen">
+    /* 简单选择器 */
+    /* 1、元素 */
+    /* p {
+      color: green;
+    } */
+
+    /* 2、class */
+    /* .blue {
+      color: blue;
+    } */
+
+    /* 3、id */
+    /* #content{
+      color: red;
+    } */
+
+    /* 组合选择器 */
+    /* space  >  +  ~ */
+
+
+    /* space  后裔 */
+    div p {
+      background-color: grey;
+    }
+
+    /* >子类选择器 */
+    div>p {
+      color: red;
+    }
+
+    /* +  相邻兄弟元素选择 */
+    div+p {
+      color: blue;
+    }
+
+    /* ~  兄弟元素选择器 */
+    div~p {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS简单选择器和组合选择器</h1>
+  <!-- 简单选择器 -->
+  <!-- <p>test 1</p>
+  <p>test 2</p>
+  <p>test 3</p>
+  <p class="blue">test 4</p>
+  <p id="content">test 5</p> -->
+
+  <!-- 组合选择器 -->
+  <div class="">
+    <p>组合选择器</p>
+    <p>段落内容一</p>
+    <span>
+      <p>段落内容二</p>
+    </span>
+  </div>
+  <p>段落内容那个三</p>
+  <p>段落内容那个四</p>
+</body>
+
+</html>
