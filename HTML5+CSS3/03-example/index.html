@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>photo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.font.im/css?family=Noto+Serif" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
@@ -14,19 +15,29 @@
 
   <!-- nav -->
   <nav class="nav">
-    <button class="button-bar"><i class="fas  fa-list"></i></button>
+    <button id="barBtn" class="button-bar"><i class="fas  fa-bars"></i></button>
   </nav>
+
+  <div id="navModal" class="nav-modal animation-top">
+    <button id="closeBtn" class="button-close"><i class="fas fa-times"></i></button>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Photo</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
 
   <!-- header -->
   <header class="header">
     <h1>PHOTOLIO</h1>
     <p>A template made by liremi.cn for photographers.</p>
-    <button class="button">Toogle Grid padding</button>
+    <button id="toogleBtn" class="button">Toogle Grid padding</button>
 
   </header>
 
   <!-- main -->
-  <main class="container">
+  <main id="main" class="container">
     <div class="column">
       <img src="https://i.picsum.photos/id/617/500/300.jpg?hmac=AQa8TwNYuFkwP5SqHFUDOqWtHhRKrCcXh58VpsaqJuM" width="100%" alt="生活">
       <img src="https://i.picsum.photos/id/362/500/900.jpg?hmac=-y0yynPFNCO0RvhKyu5qFMG-XQwuoMQNJVBCDbW-v_M" width="100%" alt="生活">
@@ -52,8 +63,8 @@
   </main>
 
   <!-- footer -->
-  <footer>
-    <p>
+  <footer class="footer">
+    <p class="iconbar">
       <i class="fab fa-weixin"></i>
       <i class="fab fa-weibo"></i>
       <i class="fab fa-github"></i>
@@ -64,6 +75,29 @@
     <p>Powered by <a href="http://lirenmi.cn" target="_blank">lirenmi.cn</a></p>
 
   </footer>
+
+  <script type="text/javascript">
+    var bar = document.getElementById('barBtn');
+    var nav = document.getElementById('navModal');
+    var close = document.getElementById('closeBtn');
+    bar.onclick = function() {
+      nav.style.display = 'block';
+    }
+    close.onclick =function(){
+      nav.style.display='none';
+    }
+
+    var toogleBtn=document.getElementById('toogleBtn');
+    var main=document.getElementById('main');
+    toogleBtn.onclick = function(){
+      if (main.className.indexOf(" space")>-1) {
+        main.className=main.className.replace(" space","");
+      }else {
+        main.className = main.className + " space";
+      }
+
+    }
+  </script>
 
 
 </body>
