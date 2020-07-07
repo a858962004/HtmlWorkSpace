@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>响应式导航</title>
+  <meta name="viewport" content="width=device-width,initail-scale=1.0">
+  <style media="screen">
+    html {
+      font-size: 15px;
+      font-family: sans-serif;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .nav {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background-color: #333;
+      width: 15%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+    }
+
+    .nav li a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      padding: 8px 16px;
+    }
+
+    .nav li a:hover:not(active) {
+      background-color: #999;
+    }
+
+    .nav li a.active {
+      background-color: #a62d2d;
+      color: white;
+    }
+
+    .content {
+      margin-left: 15%;
+    }
+
+    .content img {
+      width: 20%;
+      float: left;
+      height: auto;
+      padding: 4px 4px;
+    }
+
+    @media only screen and (max-width:993px) {
+      .nav {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+      }
+
+      .nav li {
+        float: left;
+      }
+
+      .content {
+        margin-top: 50px;
+        margin-left: 0;
+      }
+    }
+
+    @media only screen and (max-width:600px) {
+
+      .nav {
+        position: static;
+      }
+
+      .nav li {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      .content {
+        margin-top: 0;
+      }
+
+      .content img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="nav">
+    <li><a href="#">首页</a></li>
+    <li><a href="#" class="active">作品</a></li>
+    <li><a href="#">商城</a></li>
+    <li><a href="#">关于</a></li>
+  </ul>
+  <div class="content">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/234/200/200.jpg?hmac=xPu1ioX9SWsHBaICVti0qPl5c7fPKvztdkSxpv8w6oo" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/272/200/200.jpg?hmac=vmCxa6fxNtfd4n-mc7NfZmQJhr8QOgbopPrqx1DZqF0" width="200" height="200" alt="">
+    <img src="https://i.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" width="200" height="200" alt="">
+
+  </div>
+</body>
+
+</html>
