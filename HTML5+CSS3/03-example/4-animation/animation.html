@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  <title>动画</title>
+  <style media="screen">
+    /* position: relative;将animation-top设置为相对布局 */
+    /* animation top */
+    .animation-top {
+      position: relative;
+      -webkit-animation: animationtop 0.6s;
+      animation: animationtop 0.6s;
+
+    }
+
+    @-webkit-keyframes animationtop {
+      from {
+        top: -300px;
+        opacity: 0;
+      }
+
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationtop {
+      from {
+        top: -300px;
+        opacity: 0;
+      }
+
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation bottom */
+    .animation-bottom {
+      position: relative;
+      -webkit-animation: animationbottom 0.6s;
+      animation: animationbottom 0.6s;
+
+    }
+
+    @-webkit-keyframes animationbottom {
+      from {
+        bottom: -300px;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationbottom {
+      from {
+        bottom: -300px;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation left */
+    .animation-left {
+      position: relative;
+      -webkit-animation: animationleft 0.6s;
+      animation: animationleft 0.6s;
+
+    }
+
+    @-webkit-keyframes animationleft {
+      from {
+        left: -300px;
+        opacity: 0;
+      }
+
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationleft {
+      from {
+        left: -300px;
+        opacity: 0;
+      }
+
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation right */
+    .animation-right {
+      position: relative;
+      -webkit-animation: animationright 0.6s;
+      animation: animationright 0.6s;
+
+    }
+
+    @-webkit-keyframes animationright {
+      from {
+        right: -300px;
+        opacity: 0;
+      }
+
+      to {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationright {
+      from {
+        right: -300px;
+        opacity: 0;
+      }
+
+      to {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation opacity */
+    .animation-opacity {
+      position: relative;
+      -webkit-animation: animationopacity 4s;
+      animation: animationopacity 4s;
+
+    }
+
+    @-webkit-keyframes animationopacity {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationopacity {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* animation fading */
+    .animation-fading {
+      position: relative;
+      -webkit-animation: animationfading 10s infinite;
+      animation: animationfading 10s infinite;
+
+    }
+
+    @-webkit-keyframes animationfading {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes animationfading {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* animation spin */
+    .animation-spin {
+      position: relative;
+      -webkit-animation: animationspin 3s infinite linear;
+      animation: animationspin 3s infinite linear;
+
+    }
+
+    @-webkit-keyframes animationspin {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(359deg);}
+    }
+
+    @keyframes animationspin {
+      from{transform: rotate(0deg);}
+      to{transform: rotate(359deg);}
+    }
+
+    /* animation zoom */
+    .animation-zoom {
+      position: relative;
+      -webkit-animation: animationzoom 3s infinite;
+      animation: animationzoom 3s infinite;
+
+    }
+
+    @-webkit-keyframes animationzoom {
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+    }
+
+    @keyframes animationzoom {
+      from{transform: scale(0);}
+      to{transform: scale(1);}
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="animation-top">animation top</h1>
+  <h1 class="animation-bottom">animation bottom</h1>
+  <h1 class="animation-left">animation left</h1>
+  <h1 class="animation-right">animation right</h1>
+  <h1>animation opacity</h1>
+  <img class="animation-opacity" src="https://i.picsum.photos/id/26/200/300.jpg?hmac=E9i_aIqa_ifLvxqI2b1QTLCnhGQYJ83IpvaDfFM54bU" alt="">
+  <h1>animation fading</h1>
+  <img class="animation-fading" src="https://i.picsum.photos/id/26/200/300.jpg?hmac=E9i_aIqa_ifLvxqI2b1QTLCnhGQYJ83IpvaDfFM54bU" alt="">
+  <h1>animation spin</h1>
+  <span ><i class="fas fa-spinner animation-spin" style="font-size:60px;"></i></span>
+  <h1>animation zoom</h1>
+  <img class="animation-zoom" src="https://i.picsum.photos/id/26/200/300.jpg?hmac=E9i_aIqa_ifLvxqI2b1QTLCnhGQYJ83IpvaDfFM54bU" alt="">
+</body>
+
+</html>

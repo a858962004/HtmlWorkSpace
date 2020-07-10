@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>button</title>
+  <style media="screen">
+    .button {
+      display: inline-block;
+      border: none;
+      background-color: #333;
+      color: white;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .radius {
+      border-radius: 5px;
+    }
+
+    .radius-l {
+      border-radius: 50%;
+    }
+
+    .border {
+      border: 2px solid #333;
+      background-color: transparent;
+      color: #333;
+    }
+
+    /* transition: all 0.4s;将鼠标放在元素上，元素逐渐变化 */
+    .hover {
+      transition: all 0.4s;
+    }
+
+    .hover:hover {
+      background-color: #333;
+      color: white;
+
+    }
+
+    .item {
+      float: left;
+      border-right: 1px solid #666;
+    }
+
+    .item:last-child {
+      border: none;
+    }
+
+    /* opacity透明度 */
+    .item:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="button">button</button>
+  <button class="button radius">button</button>
+  <button class="button radius-l">button</button>
+  <button class="button border">button</button>
+  <button class="button border hover">button</button>
+
+  <h1>button组合</h1>
+  <div class="group">
+    <button class="button item">button</button>
+    <button class="button item">button</button>
+    <button class="button item">button</button>
+    <button class="button item">button</button>
+    <button class="button item">button</button>
+  </div>
+
+
+</body>
+
+</html>

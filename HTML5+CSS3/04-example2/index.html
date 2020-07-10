@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initail-scale=1.0">
+  <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+  <!-- 引入谷歌字体  css中同样需要设置 -->
+  <link rel="stylesheet" href="https://fonts.googleeapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="./css/style.css">
+  <title></title>
+</head>
+
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#service">服务</a></li>
+      <li><a href="#price">价格</a></li>
+      <li><a href="#about">我们</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- main start -->
+  <main class="content">
+    <!-- header start -->
+    <header class="header">
+      <h1>LOGO</h1>
+      <!-- header end -->
+    </header>
+
+    <!-- silder-box start -->
+    <div class="silder-box">
+      <div class="silder animation-opacity">
+        <img src="https://i.picsum.photos/id/427/1000/550.jpg?hmac=xKD_RKecwWQAIIh5EAEZn5EMmzMc1BrdpwkrZA1zxS8" width="1000" height="550" alt="最优方案">
+        <div class="left-top">
+          <span class="tag animation-bottom">最优方案</span>
+        </div>
+
+      </div>
+      <div class="silder animation-opacity" style="display:none;">
+        <img src="https://i.picsum.photos/id/447/1000/550.jpg?hmac=FRipNy3P9QCbgEuFctRx0AhiGIqMb3--n3Mk9D8G33w" width="1000" height="550" alt="合理价格">
+        <div class="middle">
+          <span class="tag animation-bottom">合理价格</span>
+        </div>
+
+      </div>
+      <div class="silder animation-opacity" style="display:none;">
+        <img src="https://i.picsum.photos/id/608/1000/550.jpg?hmac=liFEGYiFh6vhkjdIKuMYV-o-Yl30LIWMwGjrJywanUk" width="1000" height="550" alt="最优服务">
+        <div class="right-top">
+          <span class="tag animation-bottom">最优服务</span>
+        </div>
+      </div>
+      <div class="tool-bar">
+        <div class="row">
+          <div class="col l1" onclick="changePage(-1)">
+            <span class="page-btn"><i class="fa fa-chevron-circle-left"></i></span>
+
+          </div>
+          <div class="col l10">
+            <div class="center-align">
+              <span class="dots active" onclick="go(1)"></span>
+              <span class="dots" onclick="go(2)"></span>
+              <span class="dots" onclick="go(3)"></span>
+            </div>
+
+
+          </div>
+          <div class="col l1">
+            <div class="right-align" onclick="changePage(0)">
+              <span class="page-bt"><i class="fa fa-chevron-circle-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- silder-box end -->
+    </div>
+
+    <!-- service start -->
+    <div id="service">
+      <div class="center-align">
+        <h2 class="bottom-bar">提供什么服务</h2>
+      </div>
+      <div class="row">
+        <div class="col l3 n6 m12">
+          <div class="box-1">
+            <h3>设 计</h3>
+            <p>服务设计是有效的计划和组织一项服务中所设计的人、基础设施、通信交流一级物料等相关因素，从而提高用户体验和服务质量的设计活动</p>
+          </div>
+        </div>
+        <div class="col l3 n6 m12">
+          <div class="box-2">
+            <h3>品 牌</h3>
+            <p>服务设计是有效的计划和组织一项服务中所设计的人、基础设施、通信交流一级物料等相关因素，从而提高用户体验和服务质量的设计活动</p>
+          </div>
+        </div>
+        <div class="col l3 n6 m12">
+          <div class="box-3">
+            <h3>方 案</h3>
+            <p>服务设计是有效的计划和组织一项服务中所设计的人、基础设施、通信交流一级物料等相关因素，从而提高用户体验和服务质量的设计活动</p>
+          </div>
+        </div>
+        <div class="col l3 n6 m12">
+          <div class="box-4">
+            <h3>承 诺</h3>
+            <p>服务设计是有效的计划和组织一项服务中所设计的人、基础设施、通信交流一级物料等相关因素，从而提高用户体验和服务质量的设计活动</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- service end -->
+    </div>
+
+    <!-- price start -->
+    <div id="price">
+      <div class="center-align">
+        <h2 class="bottom-bar">定价方案</h2>
+      </div>
+      <div class="row">
+        <div class="col l4 m12">
+          <div class="card-box">
+            <ul class="card-list">
+              <li class="header">基 础</li>
+              <li>存储<b>10G</b></li>
+              <li>邮件<b>10</b></li>
+              <li>姓名<b>10</b></li>
+              <li>在线支付</li>
+              <li>
+                <h2>¥ 66</h2>
+                <p>每月</p>
+              </li>
+              <li class="footer"><button >购 买</button></li>
+            </ul>
+
+          </div>
+
+        </div>
+        <div class="col l4 m12">
+
+          <div class="card-box">
+            <ul class="card-list">
+              <li class="header">专 业</li>
+              <li>存储<b>10G</b></li>
+              <li>邮件<b>10</b></li>
+              <li>姓名<b>10</b></li>
+              <li>在线支付</li>
+              <li>
+                <h2>¥ 66</h2>
+                <p>每月</p>
+              </li>
+              <li class="footer"><button>购 买</button></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col l4 m12">
+          <div class="card-box">
+            <ul class="card-list">
+              <li class="header">高 级</li>
+              <li>存储<b>10G</b></li>
+              <li>邮件<b>10</b></li>
+              <li>姓名<b>10</b></li>
+              <li>在线支付</li>
+              <li>
+                <h2>¥ 66</h2>
+                <p>每月</p>
+              </li>
+              <li class="footer"><button>购 买</button></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- price end -->
+    </div>
+
+    <!-- about start -->
+    <div id="about">
+      <div class="center-align">
+        <h2 class="bottom-bar">关于我们</h2>
+      </div>
+      <div class="row">
+        <div class="col l4 m12">
+
+          <div class="card-box">
+            <div class="card">
+              <img src="https://i.picsum.photos/id/55/400/250.jpg?hmac=EteuSfM0O7Lq7KZ4M3EFa62jg4dvqKjAXUmxdnxfOaI" width="400px" height="250px" alt="简·多伊">
+              <div class="card-content">
+                <h2>简·多伊</h2>
+                <p>CEO</p>
+                <p>服务设计以为客户设计策划一系列易用、满意、信赖、有效地服务为目标广泛的运用于各项服务业。服务设计既可以是有形的，也可以是无形的</p>
+                <button class="button">联系</button>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+        <div class="col l4 m12">
+
+          <div class="card-box">
+            <div class="card">
+              <img src="https://i.picsum.photos/id/848/400/250.jpg?hmac=mD3VaPb_SXzOTPZZaWEEt5Z_cR3DeTvoXH6jDSJLYhA" width="400px" height="250px" alt="简·多伊">
+              <div class="card-content">
+                <h2>简·多伊</h2>
+                <p>CEO</p>
+                <p>服务设计以为客户设计策划一系列易用、满意、信赖、有效地服务为目标广泛的运用于各项服务业。服务设计既可以是有形的，也可以是无形的</p>
+                <button class="button">联系</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col l4 m12">
+
+          <div class="card-box">
+            <div class="card">
+              <img src="https://i.picsum.photos/id/932/400/250.jpg?hmac=OG-9_nOEes4yY8oA7Q0S4YmFWVK-lq3x_U0pqqQvuxI" width="400px" height="250px" alt="简·多伊">
+              <div class="card-content">
+                <h2>简·多伊</h2>
+                <p>CEO</p>
+                <p>服务设计以为客户设计策划一系列易用、满意、信赖、有效地服务为目标广泛的运用于各项服务业。服务设计既可以是有形的，也可以是无形的</p>
+                <button class="button">联系</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- about end -->
+    </div>
+
+    <!-- contact start -->
+    <div id="contact">
+      <div class="center-align">
+        <h2 class="bottom-bar">联系我们</h2>
+      </div>
+      <form class="" action="#" method="post">
+        <!-- label中for的值要和input的id完全相同，input中name值就是传给后台的字段名 -->
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="name" value="">
+        <label for="email">邮箱</label>
+        <input type="text" id="email" name="email" value="">
+        <label for="content">内容</label>
+        <input type="text" id="content" name="content" value="">
+        <button class="button">提 交</button>
+      </form>
+      <!-- contact end -->
+    </div>
+
+    <!-- main end -->
+  </main>
+
+  <footer class="footer">
+    <p class="icon-bar">
+      <i class="fab fa-weixin"></i>
+      <i class="fab fa-weibo"></i>
+      <i class="fab fa-github"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-qq"></i>
+    </p>
+    <p>Powered by <a href="#" target="_blank">Lirenmi.cn</a></p>
+
+
+  </footer>
+
+<script src="./js/project.js" charset="utf-8"></script>
+
+</body>
+
+</html>

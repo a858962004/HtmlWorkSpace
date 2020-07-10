@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>grid</title>
+  <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    /* 首先清除掉row前后的浮动效果，避免row里面的浮动影响上下元素的显示 */
+    .row::after,
+    .row::before {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .col {
+      float: left;
+      background-color: #333;
+      color: white;
+      padding: 8px 16px;
+      border-right: 3px solid red;
+    }
+
+    .col:last-child {
+      border-right: none;
+    }
+
+    .border {
+      border: 3px solid red;
+    }
+
+    .l1 {width: 8.333%;}
+    .l2 {width: 16.666%;}
+    .l3 {width: 25%;}
+    .l4 {width: 33.333%;}
+    .l5 {width: 41.666%;}
+    .l6 {width: 50%;}
+    .l7 {width: 58.333%;}
+    .l8 {width: 66.666%;}
+    .l9 {width: 75%;}
+    .l10 {width: 83.333%;}
+    .l11 {width: 91.666%;}
+    .l12 {width: 100%;}
+
+    @media only screen and (max-width:993px) {
+      .n1 {width: 8.333%;}
+      .n2 {width: 16.666%;}
+      .n3 {width: 25%;}
+      .n4 {width: 33.333%;}
+      .n5 {width: 41.666%;}
+      .n6 {width: 50%;}
+      .n7 {width: 58.333%;}
+      .n8 {width: 66.666%;}
+      .n9 {width: 75%;}
+      .n10 {width: 83.333%;}
+      .n11 {width: 91.666%;}
+      .n12 {width: 100%;}
+    }
+    @media only screen and (max-width:600px) {
+      .m1 {width: 8.333%;}
+      .m2 {width: 16.666%;}
+      .m3 {width: 25%;}
+      .m4 {width: 33.333%;}
+      .m5 {width: 41.666%;}
+      .m6 {width: 50%;}
+      .m7 {width: 58.333%;}
+      .m8 {width: 66.666%;}
+      .m9 {width: 75%;}
+      .m10 {width: 83.333%;}
+      .m11 {width: 91.666%;}
+      .m12 {width: 100%;}
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="row border">
+    <div class="col l3 n5 m8">col3</div>
+    <div class="col l3 n2 m1">col3</div>
+    <div class="col l3 n2 m1">col3</div>
+    <div class="col l3 n3 m2">col3</div>
+  </div>
+
+  <br>
+  <div class="row border">
+    <div class="col l2">col2</div>
+    <div class="col l5">col5</div>
+    <div class="col l3">col3</div>
+    <div class="col l2">col2</div>
+  </div>
+
+  <br>
+  <div class="row border">
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+    <div class="col l1">col1</div>
+  </div>
+</body>
+
+</html>

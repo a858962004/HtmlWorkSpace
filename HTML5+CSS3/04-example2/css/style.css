@@ -1,0 +1,733 @@
+html {
+  /* 引入谷歌字体 */
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* 导航 */
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 0;
+  background-color: white;
+  width: 100%;
+}
+
+.nav li {
+  float: left;
+  width: 20%;
+}
+
+.nav a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.nav a:hover {
+  background-color: #eee;
+}
+
+/* content */
+.content {
+  max-width: 1100px;
+  margin: 95px auto;
+}
+
+.header {
+  margin: 32px 0;
+  padding: 0 16px;
+}
+
+.silder-box {
+  position: relative;
+  padding: 0 16px;
+}
+
+.silder {
+  position: relative;
+}
+
+.left-top {
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 32px 16px;
+}
+
+.tag {
+  background-color: #eee;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.middle {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.right-top {
+  top: 0;
+  right: 0;
+  position: absolute;
+  padding: 32px 16px;
+}
+
+.tool-bar {
+  background-color: #444;
+  font-size: 15px;
+  padding: 5px 8px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+  left: 16px;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.dots {
+  width: 8px;
+  height: 8px;
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.right-align {
+  text-align: right;
+  cursor: pointer;
+}
+
+.page-btn {
+  cursor: pointer;
+}
+
+.active, .dots:hover {
+  background-color: white;
+}
+
+/* service */
+#service {
+  padding: 0 16px;
+}
+
+.bottom-bar {
+  padding: 16px 0;
+  border-bottom: 6px solid #888;
+  display: inline-block;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.box-1 {
+  background-color: #eee;
+  padding: 16px;
+}
+
+.box-2 {
+  background-color: #ddd;
+  padding: 16px;
+}
+
+.box-3 {
+  background-color: #666;
+  padding: 16px;
+}
+
+.box-4 {
+  background-color: #333;
+  padding: 16px;
+  color: white;
+}
+
+/* price */
+#price {
+  padding: 0 8px;
+}
+
+.card-box {
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
+
+.card-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  border: 1px solid #ddd;
+
+}
+
+.card-list li{
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-list li:last-child{
+  border-bottom: none;
+}
+
+.card-list .header {
+  background-color: #444;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-list .footer {
+  background-color: #eee;
+}
+.card-list .footer button{
+  padding: 12px 16px;
+  border: none;
+  background-color: #46b4cc;
+  color: white;
+  cursor: pointer;
+}
+
+.card-list:hover,.card-list .footer button:hover{
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2),0 4px 20px rgba(0,0,0,0.19);
+}
+
+
+
+/* ----about---- */
+#about{
+  padding: 0 8px;
+}
+
+.card{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card-content{
+  padding: 8px 16px;
+  letter-spacing: 1px;
+}
+
+.card-content .button{
+  background-color: #ddd;
+  color: black;
+  border: none;
+  width: 100%;
+  margin: 16px 0;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+
+/* ----contact---- */
+#contact{
+  padding: 0 16px;
+}
+
+#contact::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* 属性选择器 */
+input[type="text"]{
+  width: 100%;
+  border: 1px solid #eee;
+  margin: 7px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+/* 获取焦点 */
+input[type="text"]:focus{
+  outline: none;
+  border: 1px solid #46b4cc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact .button{
+  background-color: #444;
+  color: white;
+  float: right;
+  border: none;
+  margin-top: 16px;
+  padding: 8px 16px;
+}
+
+
+/* ----footer---- */
+.footer {
+  background-color: #f1f1f1;
+  padding: 64px 0;
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 64px;
+}
+
+.icon-bar {
+  font-size: 18px;
+}
+
+.icon-bar i {
+  padding: 2px;
+  cursor: pointer;
+}
+
+.icon-bar i:hover {
+  opacity: 0.5;
+}
+
+.footer a {
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+/* 工具 */
+/* 首先清除掉row前后的浮动效果，避免row里面的浮动影响上下元素的显示 */
+.row::after,
+.row::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col {
+  float: left;
+  /* background-color: #333;
+  color: white;
+  padding: 8px 16px;
+  border-right: 3px solid red; */
+}
+
+/* .col:last-child {
+  border-right: none;
+}
+
+.border {
+  border: 3px solid red;
+} */
+.l1 {
+  width: 8.333%;
+}
+
+.l2 {
+  width: 16.666%;
+}
+
+.l3 {
+  width: 25%;
+}
+
+.l4 {
+  width: 33.333%;
+}
+
+.l5 {
+  width: 41.666%;
+}
+
+.l6 {
+  width: 50%;
+}
+
+.l7 {
+  width: 58.333%;
+}
+
+.l8 {
+  width: 66.666%;
+}
+
+.l9 {
+  width: 75%;
+}
+
+.l10 {
+  width: 83.333%;
+}
+
+.l11 {
+  width: 91.666%;
+}
+
+.l12 {
+  width: 100%;
+}
+
+@media only screen and (max-width:993px) {
+  .n1 {
+    width: 8.333%;
+  }
+
+  .n2 {
+    width: 16.666%;
+  }
+
+  .n3 {
+    width: 25%;
+  }
+
+  .n4 {
+    width: 33.333%;
+  }
+
+  .n5 {
+    width: 41.666%;
+  }
+
+  .n6 {
+    width: 50%;
+  }
+
+  .n7 {
+    width: 58.333%;
+  }
+
+  .n8 {
+    width: 66.666%;
+  }
+
+  .n9 {
+    width: 75%;
+  }
+
+  .n10 {
+    width: 83.333%;
+  }
+
+  .n11 {
+    width: 91.666%;
+  }
+
+  .n12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .m1 {
+    width: 8.333%;
+  }
+
+  .m2 {
+    width: 16.666%;
+  }
+
+  .m3 {
+    width: 25%;
+  }
+
+  .m4 {
+    width: 33.333%;
+  }
+
+  .m5 {
+    width: 41.666%;
+  }
+
+  .m6 {
+    width: 50%;
+  }
+
+  .m7 {
+    width: 58.333%;
+  }
+
+  .m8 {
+    width: 66.666%;
+  }
+
+  .m9 {
+    width: 75%;
+  }
+
+  .m10 {
+    width: 83.333%;
+  }
+
+  .m11 {
+    width: 91.666%;
+  }
+
+  .m12 {
+    width: 100%;
+  }
+}
+
+/* 动画工具 */
+/* position: relative;将animation-top设置为相对布局 */
+/* animation top */
+.animation-top {
+  position: relative;
+  -webkit-animation: animationtop 0.6s;
+  animation: animationtop 0.6s;
+}
+
+@-webkit-keyframes animationtop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationtop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* animation bottom */
+.animation-bottom {
+  position: relative;
+  -webkit-animation: animationbottom 0.6s;
+  animation: animationbottom 0.6s;
+}
+
+@-webkit-keyframes animationbottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationbottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* animation left */
+.animation-left {
+  position: relative;
+  -webkit-animation: animationleft 0.6s;
+  animation: animationleft 0.6s;
+}
+
+@-webkit-keyframes animationleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* animation right */
+.animation-right {
+  position: relative;
+  -webkit-animation: animationright 0.6s;
+  animation: animationright 0.6s;
+}
+
+@-webkit-keyframes animationright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/* animation opacity */
+.animation-opacity {
+  position: relative;
+  -webkit-animation: animationopacity 1.5s;
+  animation: animationopacity 1.5s;
+}
+
+@-webkit-keyframes animationopacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animationopacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* animation fading */
+.animation-fading {
+  position: relative;
+  -webkit-animation: animationfading 10s infinite;
+  animation: animationfading 10s infinite;
+}
+
+@-webkit-keyframes animationfading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animationfading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* animation spin */
+.animation-spin {
+  position: relative;
+  -webkit-animation: animationspin 3s infinite linear;
+  animation: animationspin 3s infinite linear;
+}
+
+@-webkit-keyframes animationspin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes animationspin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* animation zoom */
+.animation-zoom {
+  position: relative;
+  -webkit-animation: animationzoom 3s infinite;
+  animation: animationzoom 3s infinite;
+}
+
+@-webkit-keyframes animationzoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes animationzoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
