@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>silder</title>
+  <style media="screen">
+    /* ----工具---- */
+
+    .relative-contain {
+      position: relative;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .top-middle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .top-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .middle-left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .middle-right {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+    }
+
+    .bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottom-middle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .bottom-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    .relative-contain::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* ----grid工具---- */
+    .col {
+      float: left;
+    }
+
+    .l1 {
+      width: 8.333%;
+    }
+
+    .l2 {
+      width: 16.666%;
+    }
+
+    .l3 {
+      width: 25%;
+    }
+
+    .l4 {
+      width: 33.333%;
+    }
+
+    .l5 {
+      width: 41.666%;
+    }
+
+    .l6 {
+      width: 50%;
+    }
+
+    .l7 {
+      width: 58.333%;
+    }
+
+    .l8 {
+      width: 66.666%;
+    }
+
+    .l9 {
+      width: 75%;
+    }
+
+    .l10 {
+      width: 83.333%;
+    }
+
+    .l11 {
+      width: 91.666%;
+    }
+
+    .l12 {
+      width: 100%;
+    }
+
+    @media only screen and (max-width:993px) {
+      .n1 {
+        width: 8.333%;
+      }
+
+      .n2 {
+        width: 16.666%;
+      }
+
+      .n3 {
+        width: 25%;
+      }
+
+      .n4 {
+        width: 33.333%;
+      }
+
+      .n5 {
+        width: 41.666%;
+      }
+
+      .n6 {
+        width: 50%;
+      }
+
+      .n7 {
+        width: 58.333%;
+      }
+
+      .n8 {
+        width: 66.666%;
+      }
+
+      .n9 {
+        width: 75%;
+      }
+
+      .n10 {
+        width: 83.333%;
+      }
+
+      .n11 {
+        width: 91.666%;
+      }
+
+      .n12 {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width:600px) {
+      .m1 {
+        width: 8.333%;
+      }
+
+      .m2 {
+        width: 16.666%;
+      }
+
+      .m3 {
+        width: 25%;
+      }
+
+      .m4 {
+        width: 33.333%;
+      }
+
+      .m5 {
+        width: 41.666%;
+      }
+
+      .m6 {
+        width: 50%;
+      }
+
+      .m7 {
+        width: 58.333%;
+      }
+
+      .m8 {
+        width: 66.666%;
+      }
+
+      .m9 {
+        width: 75%;
+      }
+
+      .m10 {
+        width: 83.333%;
+      }
+
+      .m11 {
+        width: 91.666%;
+      }
+
+      .m12 {
+        width: 100%;
+      }
+    }
+
+    /* 动画工具 */
+    /* position: relative;将animation-top设置为相对布局 */
+    /* animation top 上部进入*/
+    .animation-top {
+      position: relative;
+      -webkit-animation: animationtop 0.6s;
+      animation: animationtop 0.6s;
+    }
+
+    @-webkit-keyframes animationtop {
+      from {
+        top: -300px;
+        opacity: 0;
+      }
+
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationtop {
+      from {
+        top: -300px;
+        opacity: 0;
+      }
+
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation bottom 底部进入*/
+    .animation-bottom {
+      position: relative;
+      -webkit-animation: animationbottom 0.6s;
+      animation: animationbottom 0.6s;
+    }
+
+    @-webkit-keyframes animationbottom {
+      from {
+        bottom: -300px;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationbottom {
+      from {
+        bottom: -300px;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation left 左侧进入*/
+    .animation-left {
+      position: relative;
+      -webkit-animation: animationleft 0.6s;
+      animation: animationleft 0.6s;
+    }
+
+    @-webkit-keyframes animationleft {
+      from {
+        left: -300px;
+        opacity: 0;
+      }
+
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationleft {
+      from {
+        left: -300px;
+        opacity: 0;
+      }
+
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation right 右侧进入*/
+    .animation-right {
+      position: relative;
+      -webkit-animation: animationright 0.6s;
+      animation: animationright 0.6s;
+    }
+
+    @-webkit-keyframes animationright {
+      from {
+        right: -300px;
+        opacity: 0;
+      }
+
+      to {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationright {
+      from {
+        right: -300px;
+        opacity: 0;
+      }
+
+      to {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    /* animation opacity 透明度变化0-1*/
+    .animation-opacity {
+      position: relative;
+      -webkit-animation: animationopacity 1.5s;
+      animation: animationopacity 1.5s;
+    }
+
+    @-webkit-keyframes animationopacity {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes animationopacity {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* animation fading 透明度0-1-0*/
+    .animation-fading {
+      position: relative;
+      -webkit-animation: animationfading 10s infinite;
+      animation: animationfading 10s infinite;
+    }
+
+    @-webkit-keyframes animationfading {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes animationfading {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* animation spin 360转动*/
+    .animation-spin {
+      position: relative;
+      -webkit-animation: animationspin 3s infinite linear;
+      animation: animationspin 3s infinite linear;
+    }
+
+    @-webkit-keyframes animationspin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    @keyframes animationspin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    /* animation zoom 变大*/
+    .animation-zoom {
+      position: relative;
+      -webkit-animation: animationzoom 3s infinite;
+      animation: animationzoom 3s infinite;
+    }
+
+    @-webkit-keyframes animationzoom {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes animationzoom {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+
+
+
+    /* 手动滚动 */
+    .container1 {
+      width: 600px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .button {
+      border: none;
+      background-color: #666;
+      color: white;
+      padding: 8px 10px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .button:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* 图片导航 */
+    * {
+      box-sizing: border-box;
+    }
+
+    .container2 {
+      width: 600px;
+      height: 300px;
+
+    }
+
+    .padding {
+      padding: 0 5px;
+    }
+
+    .pointer {
+      cursor: pointer;
+      opacity: 0.7;
+      margin: 5px 0;
+    }
+
+    .imagecontan {
+      height: 300px;
+      display: block;
+      background-color: rgb(65, 54, 62);
+    }
+
+    .row::after{
+      content: "";
+      clear: both;
+      display: table;
+    }
+    /* 自动播放 */
+    .container3{
+      width: 600px;
+      height: 300px;
+      background-color: rgb(65, 54, 62);
+    }
+  </style>
+</head>
+
+<body>
+  <h2>手动滚动</h2>
+  <div class="container1 relative-contain" style="background-color:black;">
+
+    <img class="image" src="https://i.picsum.photos/id/141/900/450.jpg?hmac=cyeDHWEsWw7gFbFmZxnop3KNlIkWHXJUVragbnHDg6U" width="900px" height="450px" alt="1">
+    <img class="image" src="https://i.picsum.photos/id/834/900/450.jpg?hmac=9iwV-K1MkQ77aREyR_b27rh7dcphXvBbNCqfc-4QXaU" width="900px" height="450px" alt="2" style="display:none;">
+    <img class="image" src="https://i.picsum.photos/id/704/900/450.jpg?hmac=NZBcvtXyg2Tnr1A1jlN2FUnb6fo3ACV70VISCv_kyck" width="900px" height="450px" alt="3" style="display:none;">
+    <button class="button middle-left" onclick="go(-1)">&#60;</button>
+    <button class="button middle-right" onclick="go(1)"> &#62;</button>
+  </div>
+
+
+  <br>
+  <h2>图片导航</h2>
+  <div class="container2 relative-contain">
+    <div class="imagecontan">
+      <img class="image2 animation-opacity" src="https://i.picsum.photos/id/141/900/450.jpg?hmac=cyeDHWEsWw7gFbFmZxnop3KNlIkWHXJUVragbnHDg6U" width="900px" height="450px" alt="1">
+      <img class="image2 animation-opacity" src="https://i.picsum.photos/id/834/900/450.jpg?hmac=9iwV-K1MkQ77aREyR_b27rh7dcphXvBbNCqfc-4QXaU" width="900px" height="450px" alt="2" style="display:none;">
+      <img class="image2 animation-opacity" src="https://i.picsum.photos/id/704/900/450.jpg?hmac=NZBcvtXyg2Tnr1A1jlN2FUnb6fo3ACV70VISCv_kyck" width="900px" height="450px" alt="3" style="display:none;">
+
+    </div>
+
+  </div>
+  <div class="row" style="width:600px">
+    <div class="col l4 padding">
+      <img class="pointer" onclick="showPhoto(1)" src="https://i.picsum.photos/id/141/900/450.jpg?hmac=cyeDHWEsWw7gFbFmZxnop3KNlIkWHXJUVragbnHDg6U" width="300px" height="250px" alt="1">
+    </div>
+    <div class="col l4 padding">
+      <img class="pointer" onclick="showPhoto(2)" src="https://i.picsum.photos/id/834/900/450.jpg?hmac=9iwV-K1MkQ77aREyR_b27rh7dcphXvBbNCqfc-4QXaU" width="300px" height="250px" alt="1">
+    </div>
+    <div class="col l4 padding">
+      <img class="pointer" onclick="showPhoto(3)" src="https://i.picsum.photos/id/704/900/450.jpg?hmac=NZBcvtXyg2Tnr1A1jlN2FUnb6fo3ACV70VISCv_kyck" width="300px" height="250px" alt="1">
+    </div>
+  </div>
+  <br>
+    <h2 >自动轮播</h2>
+    <div class="container3">
+      <div class="imagecontan">
+        <img class="image3 animation-opacity" src="https://i.picsum.photos/id/141/900/450.jpg?hmac=cyeDHWEsWw7gFbFmZxnop3KNlIkWHXJUVragbnHDg6U" width="900px" height="450px" alt="1">
+        <img class="image3 animation-opacity" src="https://i.picsum.photos/id/834/900/450.jpg?hmac=9iwV-K1MkQ77aREyR_b27rh7dcphXvBbNCqfc-4QXaU" width="900px" height="450px" alt="2" style="display:none;">
+        <img class="image3 animation-opacity" src="https://i.picsum.photos/id/704/900/450.jpg?hmac=NZBcvtXyg2Tnr1A1jlN2FUnb6fo3ACV70VISCv_kyck" width="900px" height="450px" alt="3" style="display:none;">
+
+      </div>
+    </div>
+
+
+  <script type="text/javascript">
+    //默认显示position=1
+    var position = 1;
+    //n=-1向前翻页 n=1向后翻页
+    function go(n) {
+      //隐藏所有图片
+      var images = document.getElementsByClassName('image');
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.display = "none";
+      }
+      // 设置当前显示position
+      position = position + n;
+      if (position < 1) {
+        position = images.length;
+      }
+      if (position > images.length) {
+        position = 1;
+      }
+      //显示图片
+      images[position - 1].style.display = "";
+    }
+
+    //图片导航
+    function showPhoto(index) {
+      var images2 = document.getElementsByClassName('image2');
+      for (var i = 0; i < images2.length; i++) {
+        images2[i].style.display = "none";
+      }
+      images2[index - 1].style.display = "block";
+    }
+
+    //自动轮播
+    var autoPosition=1;
+    autoPlay();
+    function autoPlay(){
+      var image3s=document.getElementsByClassName('image3');
+      for (var i = 0; i < image3s.length; i++) {
+        image3s[i].style.display='none';
+      }
+      image3s[autoPosition-1].style.display='block';
+      autoPosition++;
+      if (autoPosition>image3s.length) {
+        autoPosition=1;
+      }
+      setTimeout(autoPlay,5000);
+    }
+  </script>
+</body>
+
+</html>

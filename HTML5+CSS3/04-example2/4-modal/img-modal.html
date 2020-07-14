@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/shadow.css">
+  <link rel="stylesheet" href="../css/animationtool.css">
+  <title>ig-modal</title>
+  <style media="screen">
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    .button {
+      padding: 8px 16px;
+      border: none;
+      background-color: #444;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .modal {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.2);
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      overflow: auto;
+      display: none;
+    }
+
+    /* margin: 0 auto;居中 */
+    .modal-dialog {
+      background-color: white;
+      max-width: 800px;
+      padding: 16px;
+      margin: 50px auto;
+      border-radius: 4px;
+    }
+
+    .modal-heading::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .modal-title {
+      font-weight: 400px;
+      font-size: 16px;
+      display: inline-block;
+    }
+
+    .close-btn {
+      border: none;
+      background-color: transparent;
+      font-weight: bold;
+      float: right;
+      padding: 0;
+      outline: none;
+    }
+
+    .close-btn:hover {
+      color: rgb(200, 125, 125);
+    }
+
+    .modal-inner img {
+      width: 100%;
+      height: auto;
+    }
+
+    .modal-inner {
+      font-size: 14x;
+    }
+
+    .modal-footer {
+      text-align: right;
+    }
+
+
+    .btn-ok,
+    .btn-colse {
+      color: rgb(200, 125, 125);
+      border: none;
+      background-color: transparent;
+      font-weight: bold;
+      padding: 0;
+      padding: 8px 16px;
+      cursor: pointer;
+      outline: none;
+
+    }
+  </style>
+</head>
+
+<body>
+  <button class="button shadow-hover" onclick="showModal()">open modal</button>
+  <div id="modal" class="modal">
+    <div id="modal-dialog" class="modal-dialog animation-zoomout">
+      <div class="modal-contents">
+        <div class="modal-heading">
+          <h2 class="modal-title">Modal Title</h2>
+          <button class="close-btn" onclick="colseModal()">x</button>
+        </div>
+        <div class="modal-inner">
+          <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaa</p>
+          <img src="https://i.picsum.photos/id/413/900/500.jpg?hmac=mEJJtN4CLR2KsC90HoCyx_db-AaZAVbV8o2srHOr21w" width="900" height="500" alt="img">
+          <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaa</p>
+
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn-colse" onclick="colseModal()">COLSE</button>
+          <button class="btn-ok " onclick="colseModal()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+    function colseModal() {
+      var modal = document.getElementById('modal');
+      var modalDialog=document.getElementById('modal-dialog');
+      modalDialog.className =modalDialog.className.replace(" animation-zoomout"," animation-zoomin");
+      setTimeout(function (){
+        modal.style.display = 'none';
+      }, 700);
+
+    }
+
+    function showModal() {
+      var modal = document.getElementById('modal');
+      var modalDialog=document.getElementById('modal-dialog');
+      modalDialog.className=modalDialog.className.replace(" animation-zoomin"," animation-zoomout");
+      modal.style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>

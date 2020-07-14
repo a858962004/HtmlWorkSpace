@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- 链接上一级目录用../  上两级目录../../ -->
+  <link rel="stylesheet" href="../04-example2/../css/animationtool.css">
+  <title>modal</title>
+  <style media="screen">
+    .pointer {
+      cursor: pointer;
+    }
+
+    .pointer:hover {
+      opacity: 0.5;
+    }
+
+    .modal {
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      display: none;
+    }
+
+    .modal-bar {
+      text-align: right;
+
+    }
+
+    .close-btn {
+      border: none;
+      background-color: transparent;
+      font-size: 17px;
+      color: white;
+      margin: 10px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .close-btn:hover {
+      background-color: #000;
+      color: white;
+    }
+
+    .modal-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 100px
+
+    }
+
+    .modal-inner img {
+      width: 100%;
+      height: auto;
+    }
+
+    .shadow-4 {
+      -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.19);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.19);
+    }
+  </style>
+</head>
+
+<body>
+  <img class="pointer" onclick="showModal()" src="https://i.picsum.photos/id/413/400/250.jpg?hmac=2KU2j7iWfCp7WnDlFybRI0N2Fpfy0Hj5ZlH40eT0Ze8" width="400" height="250" alt="img">
+  <div id="modal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-bar" >
+        <button class="close-btn" onclick="closeModal()">x</i></button>
+      </div>
+      <div class="modal-inner animation-zoomout">
+        <img class="shadow-4 " src="https://i.picsum.photos/id/413/900/500.jpg?hmac=mEJJtN4CLR2KsC90HoCyx_db-AaZAVbV8o2srHOr21w" width="900" height="500" alt="img">
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function showModal() {
+      // 通过id获取的是一个对象 通过class获取的是一个数组
+      var modal=document.getElementById('modal');
+      modal.style.display="block";
+    }
+
+    function closeModal() {
+      var modal=document.getElementById('modal');
+      modal.style.display="none";
+    }
+  </script>
+</body>
+
+</html>

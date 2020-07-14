@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/shadow.css">
+  <title>form</title>
+  <style media="screen">
+    body {
+      box-sizing: border-box;
+    }
+
+    *::after,
+    *::before {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .form-control {
+      border: none;
+      background-color: transparent;
+      outline: 0;
+      border-bottom: 1px solid #eee;
+      width: 100%;
+      height: 36x;
+      line-height: 20px;
+      padding: 8px 0 7px;
+      border-radius: 0;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .form-group-label {
+      margin: 20px 0;
+      position: relative;
+    }
+
+  /* transition: 0.5s;逐渐改变效果 */
+    .floating-label {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      transition: 0.5s;
+    }
+
+    .bar {
+      text-align: right;
+    }
+
+    /* transition: 0.5s;逐渐改变效果 */
+    .button {
+      border: none;
+      background-color: transparent;
+      padding: 8px 16px;
+      color: rgb(201, 98, 108);
+      cursor: pointer;
+      outline: 0;
+      transition: 0.5s;
+      border-radius: 3px;
+    }
+
+    .button:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* scale(0.85,0.85)x轴y轴缩放比例  translateY(-32px)y轴平移*/
+    .control-focus-content .floating-label {
+      color: rgb(201, 98, 108);
+      transform: scale(0.85, 0.85) translateY(-32px);
+    }
+
+    .control-focus-content .form-control {
+      border-bottom: 2px solid rgb(201, 98, 108);
+    }
+
+    /* webkit-appearance:none:;去掉select样式 */
+    select.form-control {
+      -webkit-appearance: none;
+      background: url(../images/down.png);
+      background-repeat: no-repeat;
+      background-size: 8px 8px;
+      background-position: 100% 11px;
+    }
+
+    .control-highlight .floating-label {
+      color: #666;
+      transform: scale(0.85, 0.85) translateY(-32px);
+    }
+
+    .control-highlight .form-control {
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content shadow-2">
+    <form class="" action="#" method="post">
+      <div class="form-group-label">
+        <!-- form表单中label中for的值要与input的id值一致，将两者绑定 -->
+        <label for="name" class="floating-label">姓名</label>
+        <input type="text" id="name" class="form-control" name="name" value="">
+      </div>
+      <div class="form-group-label">
+        <!-- form表单中label中for的值要与input的id值一致，将两者绑定 -->
+        <label for="email" class="floating-label">邮件</label>
+        <input type="text" id="email" class="form-control" name="email" value="">
+      </div>
+      <div class="form-group-label">
+        <!-- form表单中label中for的值要与input的id值一致，将两者绑定 -->
+        <label for="city" class="floating-label ">城市</label>
+        <select class="form-control" id="city" name="city">
+          <option value=""></option>
+          <option value="">北京</option>
+          <option value="">上海</option>
+          <option value="">广州</option>
+        </select>
+      </div>
+      <div class="form-group-label">
+        <!-- form表单中label中for的值要与input的id值一致，将两者绑定 -->
+        <label for="context" class="floating-label">内容</label>
+        <textarea id="context" style="height:150px;" class="form-control" name="context" rows="8" cols="80"></textarea>
+      </div>
+    </form>
+    <div class="bar">
+      <button class="button" type="button" name="button">提交</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var es = document.getElementsByClassName('form-control');
+    for (var i = 0; i < es.length; i++) {
+      // onfocus获取焦点
+      es[i].onfocus = function() {
+        // this.parentNode父节点
+        this.parentNode.className += ' control-focus-content';
+      }
+      es[i].onblur=function() {
+        var val;
+        if (this.tagName=='SELECT') {
+          val = this.options[this.selectedIndex].text;
+        }else {
+          val=this.value;
+        }
+
+        if (val!='') {
+          this.parentNode.className=this.parentNode.className.replace("control-focus-content","control-highlight");
+        }else {
+          this.parentNode.className=this.parentNode.className.replace(" control-focus-content","");
+          this.parentNode.className=this.parentNode.className.replace(" control-highlight","");
+        }
+
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>

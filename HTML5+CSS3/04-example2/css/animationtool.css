@@ -1,0 +1,271 @@
+
+/* ----动画工具---- */
+
+
+/* position: relative;将animation-top设置为相对布局 */
+/* animation top 上部进入*/
+.animation-top {
+  position: relative;
+  -webkit-animation: animationtop 0.6s;
+  animation: animationtop 0.6s;
+}
+
+@-webkit-keyframes animationtop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationtop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* animation bottom 底部进入*/
+.animation-bottom {
+  position: relative;
+  -webkit-animation: animationbottom 0.6s;
+  animation: animationbottom 0.6s;
+}
+
+@-webkit-keyframes animationbottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationbottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* animation left 左侧进入*/
+.animation-left {
+  position: relative;
+  -webkit-animation: animationleft 0.6s;
+  animation: animationleft 0.6s;
+}
+
+@-webkit-keyframes animationleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* animation right 右侧进入*/
+.animation-right {
+  position: relative;
+  -webkit-animation: animationright 0.6s;
+  animation: animationright 0.6s;
+}
+
+@-webkit-keyframes animationright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animationright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/* animation opacity 透明度变化0-1*/
+.animation-opacity {
+  position: relative;
+  -webkit-animation: animationopacity 1.5s;
+  animation: animationopacity 1.5s;
+}
+
+@-webkit-keyframes animationopacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animationopacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* animation fading 透明度0-1-0*/
+.animation-fading {
+  position: relative;
+  -webkit-animation: animationfading 10s infinite;
+  animation: animationfading 10s infinite;
+}
+
+@-webkit-keyframes animationfading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animationfading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* animation spin 360转动*/
+.animation-spin {
+  position: relative;
+  -webkit-animation: animationspin 3s infinite linear;
+  animation: animationspin 3s infinite linear;
+}
+
+@-webkit-keyframes animationspin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes animationspin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* animation zoom 放大动画*/
+.animation-zoomout {
+  position: relative;
+  -webkit-animation: animationzoomout 1.5s ;
+  animation: animationzoomout 1.5s ;
+}
+
+@-webkit-keyframes animationzoomout {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes animationzoomout {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* animation zoom 缩小动画*/
+.animation-zoomin {
+  position: relative;
+  -webkit-animation: animationzoomin 1.5s ;
+  animation: animationzoomin 1.5s ;
+}
+
+@-webkit-keyframes animationzoomin {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes animationzoomin {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
