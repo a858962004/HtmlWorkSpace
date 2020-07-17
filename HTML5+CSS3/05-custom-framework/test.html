@@ -313,10 +313,45 @@
     <li><a href="#">商城</a></li>
     <li><a href="#">关于</a></li>
   </ul>
+  <br>
+  <ul class="nav nav-h">
+    <li><a href="#">首页</a></li>
+    <li><a class="active" href="#">作品</a></li>
+    <li><a href="#">商城</a></li>
+    <li class="dropdown">
+      <a  href="#">更多</a>
+      <div class="dropdown-content">
+        <a href="#">合作</a>
+        <a href="#">合作</a>
+        <a href="#">合作</a>
+      </div>
+    </li>
+    <li class="right"><a href="#">关于</a></li>
+  </ul>
+  <br>
+  <h1>modal</h1>
+  <hr>
+  <button class="button red" onclick="openModal()">modal</button>
+  <div id="modal" class="modal">
+    <div class="modal-dialog">
+      <div id="modalContent" class="modal-content">
+        <div class="modal-heading">
+          <h2 class="modal-title">Modal Title</h2>
+          <button class="close-button right" onclick="closeModal()">x</button>
 
-
-
-
+        </div>
+        <div class="modal-inner">
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <img src="https://unsplash.it/900/500?image=1067" class="img" width="900" height="500" alt="content">
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="close-button" onclick="closeModal()">CLOSE</button>
+          <button class="ok-button" onclick="closeModal()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="./js/base.js" charset="utf-8"></script>
 </body>
 
