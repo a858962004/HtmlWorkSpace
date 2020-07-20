@@ -9,14 +9,14 @@
   <title>framework demo</title>
 </head>
 
-<body>
+<body>s
   <nav class="top">
     <ul class="nav nav-h black">
-      <li><a href="#" class="text-lightgray large hover-lightgray"><i class="fa fa-home">Logo</i></a></li>
-      <li><a href="#" class="text-lightgray large hover-lightgray"><i class="fab fa-firefox-browser"></i></a></li>
-      <li><a href="#" class="text-lightgray large hover-lightgray"><i class="fas fa-envelope"></i></a></li>
-      <li><a href="#" class="text-lightgray large hover-lightgray"><i class="fas fa-user"></i></a></li>
-      <li class="dropdown">
+      <li><a href="#" class="text-lightgray large hover-lightgray"><i class="fa fa-home margin-right"></i>Logo</a></li>
+      <li class="hide-small"><a href="#" class="text-lightgray large hover-lightgray"><i class="fab fa-firefox-browser"></i></a></li>
+      <li class="hide-small"><a href="#" class="text-lightgray large hover-lightgray"><i class="fas fa-envelope"></i></a></li>
+      <li class="hide-small"><a href="#" class="text-lightgray large hover-lightgray"><i class="fas fa-user"></i></a></li>
+      <li class="dropdown hide-small">
         <a href="#" class="text-lightgray large hover-lightgray"><i class="fas fa-bell"></i><sup class="sup red">3</sup></a>
         <div class="dropdown-content">
           <a href="#">3个好友请求</a>
@@ -24,16 +24,222 @@
           <a href="#">有新的留言</a>
         </div>
       </li>
+      <li class="right hide-small">
+        <a href="#" class="text-lightgray large hover-lightgray">
+          <img class="circle" src="https://i.picsum.photos/id/1005/300/300.jpg?hmac=LG1U93uHOTAn65RV5_GWWSjBZvOAlYrcGROqSxLUsm8" width="25" height="25" alt="author">
+        </a>
+      </li>
+      <!-- data-*自定义属性 -->
+      <li class="right hide-large hide-medium" >
+        <a data-toggle="menu" href="#" class="text-lightgray large hover-black"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+    <ul class="nav black mobile hide-large hide-medium" data-target="menu" style="display:none;">
+      <li><a href="#" class="text-lightgray hover-lightgray">我的主页</a></li>
+      <li><a href="#" class="text-lightgray hover-lightgray">我的主页</a></li>
+      <li><a href="#" class="text-lightgray hover-lightgray">我的主页</a></li>
+      <li><a href="#" class="text-lightgray hover-lightgray">我的主页</a></li>
+
     </ul>
 
   </nav>
   <!-- main content -->
-  <div class="">
+  <div class="margin-top-64">
+    <div class="row-padding">
+      <!-- col1 start -->
+      <div class="col l3 s12">
+        <div class="round shadow padding margin-bottom">
+          <p class="center">我的主页</p>
+          <div class="center">
+            <img class="circle" src="https://i.picsum.photos/id/1005/300/300.jpg?hmac=LG1U93uHOTAn65RV5_GWWSjBZvOAlYrcGROqSxLUsm8" width="110" height="110" alt="author">
+          </div>
+          <hr>
+          <ul class="list">
+            <li><i class="round-small fas fa-pencil-alt text-red margin-right"></i>Designer,UI</li>
+            <li><i class="round-small fa fa-calendar text-red margin-right"></i>London,UK</li>
+            <li><i class="round-small fa fa-birthday-cake text-red margin-right"></i>April,1,1988</li>
+          </ul>
+        </div>
+
+        <div class="round shadow lightred padding margin-bottom">
+          <ul class="list">
+            <li class="hover-red round-small"><i class="fas fa-pencil-alt text-white margin-right"></i>Designer,UI</li>
+            <li class="hover-red round-small"><i class="fa fa-calendar text-white margin-right"></i>London,UK</li>
+            <li class="hover-red round-small"><i class="fa fa-birthday-cake text-white margin-right"></i>April,1,1988</li>
+          </ul>
+        </div>
+
+        <div class="round shadow padding margin-bottom">
+          <span class="tag lightred">最新</span>
+          <span class="tag lightblue">Android</span>
+          <span class="tag lightgreen">H5</span>
+          <span class="tag lightyellow">乐观</span>
+          <span class="tag lightorange">向上</span>
+          <span class="tag lightgrey">运动</span>
+          <span class="tag lightred">篮球</span>
+          <span class="tag lightblue">朋友</span>
+          <span class="tag lightyellow">社交</span>
+        </div>
+        <div class="round relative-container shadow padding margin-bottom lightyellow">
+          <button class="btn top-right" onclick="this.parentNode.style.display='none';">x</button>
+          <h4>Hey!</h4>
+          <p class="small">有人正在浏览你的主页，看看TA是谁</p>
+        </div>
+        <div class="round relative-container shadow padding margin-bottom lightyellow">
+          <button class="btn top-right" onclick="this.parentNode.style.display='none';">x</button>
+          <h4>Hey!2</h4>
+          <p class="small">有人正在浏览你的主页，看看TA是谁</p>
+        </div>
+        <div class="round relative-container shadow padding margin-bottom lightyellow">
+          <button class="btn top-right" onclick="this.parentNode.style.display='none';">x</button>
+          <h4>Hey!3</h4>
+          <p class="small">有人正在浏览你的主页，看看TA是谁</p>
+        </div>
+        <!-- col1 ending -->
+      </div>
+      <!-- col2 start -->
+      <div class="col l7 s12">
+        <div class="shadow round padding margin-bottom">
+
+          <form class="" action="index.html" method="post">
+            <div class="form-group-label">
+              <label class="floating-label" for="content">发布你的状态：</label>
+              <input id="content" class="form-control" class="content" type="text" name="content" value="">
+            </div>
+            <div class="right-align">
+              <button class="button lightred tiny"><i class="fas fa-pencil-alt margin-right"></i>发送</button>
+            </div>
+          </form>
+        </div>
+        <div class="shadow round padding-tb margin-bottom">
+          <div class="container">
+            <img class="circle left margin-right" src="https://i.picsum.photos/id/1005/300/300.jpg?hmac=LG1U93uHOTAn65RV5_GWWSjBZvOAlYrcGROqSxLUsm8" width="60" height="60" alt="author">
+            <h3 style="display:inline-block;">Jhon Done</h3>
+            <span class="right text-lightgrey">1 min</span>
+            <!-- 清除浮动 -->
+            <hr class="clear">
+            <span>文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章</span>
+          </div>
+          <div class="row-padding margin-top">
+            <div class="col l6 s12 margin-bottom">
+              <img class="img" src="https://i.picsum.photos/id/1000/300/200.jpg?hmac=iTBiszK8i932x0pR2OoD3n00D6LkyxfxMWLGWYfgtpc" width="300" height="200" alt="alt1">
+            </div>
+            <div class="col l6 s12 margin-bottom">
+              <img class="img" src="https://i.picsum.photos/id/1001/300/200.jpg?hmac=Zmwt6zplrNLj06Kwde0STv847FFShXH4U2khu86HqxI" width="300" height="200" alt="alt2">
+            </div>
+          </div>
+          <div class="container">
+            <button class="button red"><i class="fas fa-thumbs-up margin-right"></i>喜欢</button>
+            <button class="button"><i class="fas fa-comment-alt margin-right"></i>留言</button>
+          </div>
+        </div>
+        <div class="shadow round padding-tb margin-bottom">
+          <div class="container">
+            <img class="circle left margin-right" src="https://i.picsum.photos/id/1005/300/300.jpg?hmac=LG1U93uHOTAn65RV5_GWWSjBZvOAlYrcGROqSxLUsm8" width="60" height="60" alt="author">
+            <h3 style="display:inline-block;">Jhon Done</h3>
+            <span class="right text-lightgrey">1 min</span>
+            <!-- 清除浮动 -->
+            <hr class="clear">
+            <span>文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章</span>
+          </div>
+          <div class="row-padding margin-top">
+            <!-- <div class="col l6 s12 margin-bottom">
+              <img class="img" src="https://i.picsum.photos/id/1000/300/200.jpg?hmac=iTBiszK8i932x0pR2OoD3n00D6LkyxfxMWLGWYfgtpc" width="300" height="200" alt="alt1">
+            </div>
+            <div class="col l6 s12 margin-bottom">
+              <img class="img" src="https://i.picsum.photos/id/1001/300/200.jpg?hmac=Zmwt6zplrNLj06Kwde0STv847FFShXH4U2khu86HqxI" width="300" height="200" alt="alt2">
+            </div> -->
+          </div>
+          <div class="container">
+            <button class="button red"><i class="fas fa-thumbs-up margin-right"></i>喜欢</button>
+            <button class="button"><i class="fas fa-comment-alt margin-right"></i>留言</button>
+          </div>
+        </div>
+        <div class="shadow round padding-tb margin-bottom">
+          <div class="container">
+            <img class="circle left margin-right" src="https://i.picsum.photos/id/1005/300/300.jpg?hmac=LG1U93uHOTAn65RV5_GWWSjBZvOAlYrcGROqSxLUsm8" width="60" height="60" alt="author">
+            <h3 style="display:inline-block;">Jhon Done</h3>
+            <span class="right text-lightgrey">1 min</span>
+            <!-- 清除浮动 -->
+            <hr class="clear">
+            <span>文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章文章</span>
+          </div>
+          <div class="row-padding margin-top">
+            <div class="col l12 s12 margin-bottom">
+              <img class="img" src="https://i.picsum.photos/id/690/800/400.jpg?hmac=YRrwd1ElSGIWUJ70QIY0MjaI_pJdLGXPaHH1eyUHiPM" width="800" height="400" alt="alt1">
+            </div>
+            <!-- <div class="col l6 s12 margin-bottom">
+              <img class="img" src="https://i.picsum.photos/id/1001/300/200.jpg?hmac=Zmwt6zplrNLj06Kwde0STv847FFShXH4U2khu86HqxI" width="300" height="200" alt="alt2">
+            </div> -->
+          </div>
+          <div class="container">
+            <button class="button red"><i class="fas fa-thumbs-up margin-right"></i>喜欢</button>
+            <button class="button"><i class="fas fa-comment-alt margin-right"></i>留言</button>
+          </div>
+        </div>
+        <!-- col2 ending -->
+      </div>
+
+      <!-- col3 start -->
+      <div class="col l2 s12">
+        <div class="shadow container center round padding-tb margin-bottom">
+          <p>要开始活动：</p>
+          <img class="img" src="https://i.picsum.photos/id/200/200/150.jpg?hmac=RCxIwYBDgqsuuVL5S7zz_IB9gZq6eNpJvgL6ivazYMU" width="200" height="150" alt="img">
+          <p>每日狂欢</p>
+          <p class=" small">星期五 15:00</p>
+          <button class="button lightgrey hover-shadow-off hover-lightgray" style="width:100%;">详情</button>
+
+        </div>
+        <div class="shadow container center round padding-tb margin-bottom">
+          <p >好友请求</p>
+          <img  src="https://i.picsum.photos/id/70/150/150.jpg?hmac=S08PQdrXEG6LO85ctzxJhkySWsJOAcCpRLD2vh05FkQ" width="80" height="80" alt="img">
+
+          <p class="small small-wide">小鱼儿</p>
+          <div class="row">
+            <div class="col l6">
+              <button class="button lightgreen hover-shadow-off hover-lightgrey" style="width:100%;">Yes</button>
+            </div>
+            <div class="col l6">
+              <button class="button lightred hover-shadow-off hover-lightgrey"  style="width:100%;">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="shadow container center round padding-tb margin-bottom">
+          <p >好友请求</p>
+          <img  src="https://i.picsum.photos/id/70/150/150.jpg?hmac=S08PQdrXEG6LO85ctzxJhkySWsJOAcCpRLD2vh05FkQ" width="80" height="80" alt="img">
+
+          <p class="small small-wide">小鱼儿</p>
+          <div class="row">
+            <div class="col l6">
+              <button class="button lightgreen hover-shadow-off hover-lightgrey" style="width:100%;">Yes</button>
+            </div>
+            <div class="col l6">
+              <button class="button lightred hover-shadow-off hover-lightgrey"  style="width:100%;">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="shadow container center round padding-tb margin-bottom">
+          <p >好友请求</p>
+          <img  src="https://i.picsum.photos/id/70/150/150.jpg?hmac=S08PQdrXEG6LO85ctzxJhkySWsJOAcCpRLD2vh05FkQ" width="80" height="80" alt="img">
+
+          <p class="small small-wide">小鱼儿</p>
+          <div class="row">
+            <div class="col l6">
+              <button class="button lightgreen hover-shadow-off hover-lightgrey" style="width:100%;">Yes</button>
+            </div>
+            <div class="col l6">
+              <button class="button lightred hover-shadow-off hover-lightgrey"  style="width:100%;">No</button>
+            </div>
+          </div>
+        </div>
+        <!-- col3 ending -->
+      </div>
+    </div>
 
   </div>
   <!-- footer -->
-  <footer>
-
+  <footer class="black center margin-top padding-tb">
+    <p>Power by <a href="#" class="text-lightgrey">lirenmi.cn</a></p>
   </footer>
 
 

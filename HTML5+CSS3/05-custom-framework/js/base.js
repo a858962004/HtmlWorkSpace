@@ -34,3 +34,29 @@ for (var i = 0; i < es.length; i++) {
     }
   }
 }
+
+// nav
+// 根据自定义属性名称和自定义属性的值获取控件
+function selector(attribute, value) {
+  // 获取所有包含自定义属性的控件
+  var all = document.getElementsByTagName('*');
+  // 当属性值等于value时返回控件
+  for (var i = 0; i < all.length; i++) {
+    var v=all[i].getAttribute(attribute);
+    if (v == value) {
+      return all[i];
+    }
+  }
+}
+
+var navMenu = selector('data-toggle', 'menu');
+var target0 = selector('data-target', 'menu');
+navMenu.onclick = function() {
+  console.log(target0.style.display);
+
+  if(target0.style.display == 'none'){
+    target0.style.display = 'block';
+  }else if (target0.style.display == 'block') {
+    target0.style.display = 'none';
+  }
+}

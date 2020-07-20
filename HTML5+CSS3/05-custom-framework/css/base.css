@@ -206,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container::after, .container::before, .panel::after, .panel::before,
 .content::after, .content::before, .row::after, .row::before, .row-padding::after,
-.row-padding::before, .relative-contaner::after, .relative-contaner::before, .clear::after, .clear::before {
+.row-padding::before, .relative-container::after, .relative-container::before, .clear::after, .clear::before {
   content: "";
   clear: both;
   display: table;
@@ -512,6 +512,7 @@ li.right {
 }
 
 /* •––––––– tag tool ––––––––•*/
+/* tag标签 badge圆形标签 */
 .badge, .tag {
   background-color: #303841;
   color: #fff;
@@ -522,6 +523,7 @@ li.right {
   font-size: 75%
 }
 
+/* 圆形标签 */
 .badge {
   border-radius: 50%
 }
@@ -663,7 +665,7 @@ select.form-control {
 }
 
 /* •––––––– position tool ––––––––•*/
-.relative-contaner {
+.relative-container {
   position: relative;
 }
 
