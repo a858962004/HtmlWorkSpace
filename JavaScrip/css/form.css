@@ -1,0 +1,11 @@
+.inputFailure{
+border: 1px solid red;
+}
+
+.inputSuccess{
+  border: 1px solid green;
+}
+
+.init{
+  border: 1px solid #000;
+}

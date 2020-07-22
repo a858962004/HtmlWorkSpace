@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>other</title>
+  <script type="text/javascript">
+    window.onload = function() {
+      //单选框
+      document.getElementById('selectBtn').addEventListener('click', function() {
+        // 一般单选框选项不唯一，所以用document.all获取所有单选框选项，返回值为数组、
+        var sexRadios = document.all('sex');
+        for (var i = 0; i < sexRadios.length; i++) {
+          if (sexRadios[i].checked) {
+            alert(sexRadios[i].value);
+          }
+        }
+      }, false);
+
+      //复选框
+      document.getElementById('selectHobby').addEventListener('click', function() {
+        var hobbyCheckBoxs = document.all('hobby');
+        //如果复选框只有一个的时候，获取到的是一个对象不是数组，此时数组长度为undefined
+        if (hobbyCheckBoxs.length == undefined) {
+          if (hobbyCheckBoxs.checked) {
+            alert(hobbyCheckBoxs.value);
+          }
+        } else {
+          hobbyString = "";
+          for (var i = 0; i < hobbyCheckBoxs.length; i++) {
+            if (hobbyCheckBoxs[i].checked) {
+              hobbyString += hobbyCheckBoxs[i].value + '、';
+            }
+          }
+          alert(hobbyString);
+        }
+      }, false);
+      //复选框全选
+      document.getElementById('allHobby').addEventListener('click', function() {
+        var hobbyCheckBoxs = document.all('hobby');
+        //如果复选框只有一个的时候，获取到的是一个对象不是数组，此时数组长度为undefined
+        if (hobbyCheckBoxs.length == undefined) {
+          //使复选框勾选状态与全选框的勾选状态相同
+          hobbyCheckBoxs.checked = this.checked;
+        } else {
+          for (var i = 0; i < hobbyCheckBoxs.length; i++) {
+            //使复选框勾选状态与全选框的勾选状态相同
+            hobbyCheckBoxs[i].checked = this.checked;
+          }
+        }
+      }, false);
+      //下拉选择
+      document.getElementById('city').addEventListener('change', function() {
+        alert(this.value);
+      }, false);
+      document.getElementById('cityBtn').addEventListener('click', function() {
+        var citySelect = document.getElementById('city');
+        alert(citySelect.value);
+      }, false);
+      //文字编辑域对键盘的监听，onkeyup、onkeydown、onkeypress
+      document.getElementById('comment').addEventListener('keyup', function() {
+        checkCommentLength();
+      }, false);
+      document.getElementById('comment').addEventListener('keydown', function() {
+        checkCommentLength();
+      }, false);
+      document.getElementById('comment').addEventListener('keypress', function() {
+        checkCommentLength();
+      }, false);
+      document.getElementById('confirmBtn').addEventListener('click',function(){
+        // window.confirm('请确认信息！')弹出确认框  返回值布尔型
+        if (window.confirm('请确认信息！')) {
+          document.getElementById('confirmSpan').innerHTML='已确认';
+        }else{
+          document.getElementById('confirmSpan').innerHTML='未确认';
+        }
+      },false);
+    }
+
+    function checkCommentLength() {
+      var comment = document.getElementById('comment');
+      var commentSpan = document.getElementById('commentSpan');
+      var commentBtn=document.getElementById('commentBtn');
+      currentLength = comment.value.length;
+      maxLength = 20;
+      if (currentLength <= maxLength) {
+        commentSpan.innerHTML = "最多还可以输入" + (maxLength - currentLength) + "个字";
+        // disabled=false表示组件不被禁用
+        commentBtn.disabled=false;
+      } else {
+        commentSpan.innerHTML = "输入的字数过多<span style='color:red;'>" + (currentLength - maxLength) + "</span>个字";
+        // disabled=true表示组件禁用
+        commentBtn.disabled=true;
+      }
+
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <!-- 单选框 同一组单选框name id 都相同 -->
+  性别：
+  <input type="radio" name="sex" id='sex' value="男" checked>男
+  <input type="radio" name="sex" id='sex' value="女">女<br>
+  <button id="selectBtn" type="button" name="button">选择</button>
+  <br>
+  <br>
+
+  <!-- 复选框 同样为一组元素 name id 需相同 -->
+  <input id="allHobby" type="checkbox" name="allhobby" value="">爱好：<br>
+  <div class="" style="padding-left:10px">
+    <input type="checkbox" name="hobby" id="hobby" value="篮球">篮球 <br>
+    <input type="checkbox" name="hobby" id="hobby" value="音乐">音乐<br>
+    <input type="checkbox" name="hobby" id="hobby" value="乒乓球">乒乓球<br>
+    <input type="checkbox" name="hobby" id="hobby" value="健身">健身<br>
+    <input type="checkbox" name="hobby" id="hobby" value="游泳">游泳<br>
+    <input type="checkbox" name="hobby" id="hobby" value="篮球">篮球<br>
+  </div>
+  <button id="selectHobby" type="button" name="button">选择的爱好</button>
+  <br>
+  <br>
+
+  <!-- 下拉列表 -->
+  城市：
+  <select id="city" class="" name="">
+    <option value="北京">北京</option>
+    <option value="上海">上海</option>
+    <option value="广州">广州</option>
+    <option value="天津">天津</option>
+    <option value="杭州">杭州</option>
+    <option value="武汉">武汉</option>
+  </select>
+  <button id="cityBtn" type="button" name="button">城市选择</button>
+  <br>
+  <br>
+
+  <!-- 文字编辑域 -->
+  评价: <br>
+  <textarea id="comment" name="name" rows="8" cols="20"></textarea>
+  <br>
+  <span id="commentSpan">最多还可以输入20个字</span>
+  <br>
+  <button id="commentBtn" type="button" name="button">提交</button>
+  <br>
+  <br>
+
+  <!-- 确认框 -->
+  <button id="confirmBtn" type="button" name="button">弹出确认框</button>
+  <span id="confirmSpan">未确认</span>
+</body>
+
+</html>
