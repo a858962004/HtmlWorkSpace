@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/util.js" charset="utf-8"></script>
+    <script src="js/emp_add.js" charset="utf-8"></script>
+    <script src="js/baseutil.js" charset="utf-8"></script>
+    <script src="My97DatePicker/WdatePicker.js" charset="utf-8"></script>
+    <link href="My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+    <title>添加雇员信息</title>
+  </head>
+  <body>
+    <form id="empForm" class="" action="#" method="post">
+      <table>
+        <th colspan='3'>
+          添加雇员信息
+        </th>
+        <tr>
+          <td>雇员编号：</td>
+          <td><input id="empCode" type="text" name="empCode" value=""></td>
+          <td><span id="empCodeSpan"></span></td>
+        </tr>
+        <tr>
+          <td>雇员姓名：</td>
+          <td><input id="empName" type="text" name="empName" value=""></td>
+          <td><span id="empNameSpan"></span></td>
+        </tr>
+        <tr>
+          <td>雇员职位：</td>
+          <td><input id="empJob" type="text" name="empJob" value=""></td>
+          <td><span id="empJobSpan"></span></td>
+        </tr>
+        <tr>
+          <td>雇佣日期：</td>
+          <td><input id="empDate"  type="text" name="empDate"
+             onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})"></td>
+          <td><span id="empDateSpan"></span></td>
+        </tr>
+        <tr>
+          <td>基本工资：</td>
+          <td><input id="empPay" type="text" name="empPay" value=""></td>
+          <td><span id="empPaySpan"></span></td>
+        </tr>
+        <tr>
+          <td>佣&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金：</td>
+          <td><input id="empCom" type="text" name="empCom" value=""></td>
+          <td><span id="empComSpan"></span></td>
+        </tr>
+
+      </table>
+      <button id="subBtn" type="submit" name="button">提交</button>
+      <button id="resetBtn" type="button" name="button">重置</button>
+    </form>
+
+  </body>
+</html>

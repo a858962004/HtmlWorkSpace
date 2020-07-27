@@ -173,7 +173,7 @@ function validateRegexIDCard(objId) {
 }
 
 /**
- * [组织表单提交]
+ * [stopForm 阻止表单提交]
  * @param  {[type]} e [description]
  * @return {[type]}   [description]
  */
@@ -185,10 +185,15 @@ function stopForm(e) {
   }
 }
 
+/**
+ * [initForm 样式重置]
+ * @param  {[type]} objId [元素id]
+ * @return {[type]}       [description]
+ */
 function initForm(objId) {
   var obj = document.getElementById(objId);
   var spanObj = document.getElementById(objId + "Span");
   obj.className = 'init';
-  obj.value="";
+  obj.value = "";
   spanObj.innerHTML = '';
 }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>房贷数据计算</title>
+    <script src="js/baseutil.js" charset="utf-8"></script>
+    <script src="js/util.js" charset="utf-8"></script>
+    <script src="js/calculate.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/form.css">
+  </head>
+  <body>
+    <form id="calForm" class="" action="" method="post">
+      <table>
+        <tr>
+          <td>平米单价</td>
+          <td> <input id="unitPrice" type="text" name='unitPrice'></td>
+          <td><span>元/平米</span></td>
+          <td><span id="unitPriceSpan"></span></td>
+        </tr>
+        <tr>
+          <td>租金</td>
+          <td> <input id="rent" type="text" name='rent'></td>
+          <td><span>元/平米/月</span></td>
+          <td><span id="rentSpan"></span></td>
+        </tr>
+        <tr>
+          <td>物业费</td>
+          <td> <input id="proPrice" type="text" name='proPrice'></td>
+          <td><span>元/平米/月</span></td>
+          <td><span id="proPriceSpan"></span></td>
+        </tr>
+        <tr>
+          <td>面积</td>
+          <td> <input id="area" type="text" name='area'></td>
+          <td><span>平米</span></td>
+          <td><span id="areaSpan"></span></td>
+        </tr>
+        <tr>
+          <td>首付比例</td>
+          <td><select name="" id="firstPayScale">
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40" selected>40%</option>
+            <option value="50">50%</option>
+          </select></td>
+          <td><span>成</span></td>
+          <td><span id="firstPayScaleSpan"></span></td>
+        </tr>
+        <tr>
+          <td>房贷利息</td>
+          <td> <input id="interest" type="text" name='interest'></td>
+          <td><span></span></td>
+          <td><span id="interestSpan"></span></td>
+        </tr>
+      </table>
+    </form>
+    <button id="calBtn" type="button" name="button">计算</button>
+    <button id="resetBtn" type="button" name="button">重置</button>
+
+    <form id="resultForm"  class="" action="" method="post">
+      <table>
+        <tr>
+          <td>首付金额</td>
+          <td><input type="text" id="firstPay" disabled value="0"> </td>
+          <td><span>元</span></td>
+        </tr>
+        <tr>
+          <td>贷款总额</td>
+          <td><input type="text" id="allPay" disabled value="0"> </td>
+          <td><span>元</span></td>
+        </tr>
+        <tr>
+          <td>每月支付利息</td>
+          <td><input type="text" id="monthInterest" disabled value="0"> </td>
+          <td><span>元/月</span></td>
+        </tr>
+        <tr>
+          <td>每月租金</td>
+          <td><input type="text" id="monthRent" disabled value="0"> </td>
+          <td><span>元/月</span></td>
+        </tr>
+        <tr>
+          <td>每月物业费</td>
+          <td><input type="text" id="monthPro" disabled value="0"> </td>
+          <td><span>元/月</span></td>
+        </tr>
+
+      </table>
+    </form>
+
+
+  </body>
+</html>
