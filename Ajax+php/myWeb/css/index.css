@@ -1,0 +1,12 @@
+button{
+  border-radius: 50%;
+}
+
+.studentTable{
+  width: 400px;
+  border: 1px solid black
+}
+
+.studentTable td{
+  border: 1px solid black;
+}
