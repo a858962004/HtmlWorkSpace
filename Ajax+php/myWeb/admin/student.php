@@ -1,4 +1,4 @@
-﻿<?php  
+<?php  
   header("Content-Type:text/xml");
   $arr = array();
   $arr[0] = array("name" => "小明" ,"age" => "18" ,"sex" => "男" );

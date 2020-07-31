@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="430df2ba-994f-4446-b9c4-fe3dfff90060" name="Default Changelist" comment="" />
+    <list default="true" id="430df2ba-994f-4446-b9c4-fe3dfff90060" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb/admin/student.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb/admin/student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb/admin/tel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb/admin/tel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb/admin/userName.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb/admin/userName.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb2/admin/student.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb2/admin/student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb2/admin/tel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb2/admin/tel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb2/admin/userName.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb2/admin/userName.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ajax+php/myWeb2/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax+php/myWeb2/register.php" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,6 +24,7 @@
     <session id="-891762977">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -36,9 +46,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="152" />
+    <option name="y" value="42" />
     <option name="width" value="1750" />
     <option name="height" value="968" />
   </component>
@@ -88,15 +98,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596165872582</updated>
-      <workItem from="1596165875904" duration="506000" />
+      <workItem from="1596165875904" duration="694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506000" />
+    <option name="totallyTimeSpent" value="694000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="20" width="1400" height="774" extended-state="1" />
+    <frame x="122" y="34" width="1400" height="774" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />

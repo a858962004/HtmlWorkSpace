@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $userName = $_GET["userName"];
 $cbName=$_GET["cb"];
 if($userName == 'xiaoming'){
